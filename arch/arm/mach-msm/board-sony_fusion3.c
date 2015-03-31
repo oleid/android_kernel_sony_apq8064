@@ -247,6 +247,17 @@
 #error "ERROR: Unknown machine!"
 #endif
 
+
+/// OL: build fix hack
+#ifndef machine_is_sony_pollux_windy_cdb
+#define machine_is_sony_pollux_windy_cdb() 0
+#endif
+
+#ifndef machine_is_sony_pollux_windy
+#define machine_is_sony_pollux_windy() 0
+#endif
+/// OL: end of hack
+
 /* Section: Vibrator */
 #if defined(CONFIG_VIBRATOR_LC898300)
 struct lc898300_vib_cmd lc898300_vib_cmd_data = {
